@@ -18,7 +18,7 @@ Para tornar as coisas mais rápidas e pular o cypress, abrindo um navegador para
 
 Existem alguns testes 'tagueados' nesses arquivos:
 
-[home.feature](https://github.com/lucasn580/cypress-pupilla/cypress/integration/home.feature)
+[home.feature](https://github.com/lucasn580/cypress-pupilla/tree/master/cypress/integration/home.feature)
 ```
 @pupilla
 @home
@@ -36,7 +36,7 @@ Feature: Home médico (logado)
 
 ```
 
-[landing_page.feature](https://github.com/lucasn580/cypress-pupilla/cypress/integration/landing_page.feature)
+[landing_page.feature](https://github.com/lucasn580/cypress-pupilla/tree/master/cypress/integration/landing_page.feature)
 ```
 @pupilla
 @landingpage

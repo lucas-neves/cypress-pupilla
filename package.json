@@ -11,8 +11,8 @@
     "pretest": "npm run report:clean",
     "posttest": "npm run report:merge && npm run report:mocha",
     "test": "npm run pretest && npm run cy:run && npm run posttest",
-    "test:prod": "set CYPRESS_ENV=production&& npm run test",
-    "test:hml": "set CYPRESS_ENV=homolog&& npm run test"
+    "test:prod": "CYPRESS_ENV=production npm run test",
+    "test:hml": "CYPRESS_ENV=homolog npm run test"
   },
   "repository": {
     "type": "git",
