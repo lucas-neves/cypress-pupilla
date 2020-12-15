@@ -1,0 +1,18 @@
+{    
+    "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+    "baseUrl": "https://www.pupilla.com/",
+    "viewportWidth": 1024,
+    "viewportHeight": 768,
+    "defaultCommandTimeout": 10000,
+    "watchForFileChanges": false,
+    "chromeWebSecurity": false,
+    "retries": {
+        "runMode": 1,
+        "openMode": 1
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFIle": "reporter-config.json"
+    },
+    "testFiles": "**/*.feature"
+}

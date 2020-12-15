@@ -1,0 +1,53 @@
+{
+  "name": "cypress-pupilla",
+  "version": "1.0.0",
+  "description": "Projeto Automação Web do site Pupilla",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "npx cypress run -e TAGS=@pupilla --browser chrome --headless",
+    "report:merge": "mochawesome-merge > index.json",
+    "report:mocha": "marge index.json",
+    "report:clean": "rimraf mochawesome-report index.json",
+    "pretest": "npm run report:clean",
+    "posttest": "npm run report:merge && npm run report:mocha",
+    "test": "npm run pretest && npm run cy:run && npm run posttest",
+    "test:prod": "set CYPRESS_ENV=production&& npm run test",
+    "test:hml": "set CYPRESS_ENV=homolog&& npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/lucasn580/cypress-pupilla.git"
+  },
+  "keywords": [
+    "cypress",
+    "test-automation",
+    "qa",
+    "javascript",
+    "fleury"
+  ],
+  "author": "Lucas Neves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/lucasn580/cypress-pupilla/issues"
+  },
+  "homepage": "https://gitlab.com/lucasn580/cypress-pupilla#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "clipboardy": "^2.3.0",
+    "cypress": "^6.1.0",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "cypress-xpath": "^1.6.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "rimraf": "^3.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
